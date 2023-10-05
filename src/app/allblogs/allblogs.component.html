@@ -1,0 +1,29 @@
+<section class="container" style="margin-top: 80px;">
+  <h5>Recent Blogs</h5>
+    <div class="row">
+      <div class="col-11">
+        <div class="row mt-3" *ngFor="let data of myBlogs">
+          <div class="col-12">
+            <div class="card">
+              <div class="card-body">
+                <div class="row">
+                  <div class="col-9">
+                    <a [routerLink]="['/viewblog/comment',data.blogId]"><h5 class="card-title">{{data.title}}</h5></a>
+                    <p class="card-text">{{data.description}}</p>
+                    <a [routerLink]="['/viewblog/comment',data.blogId]" class="btn btn-outline-info btn-sm">Add Comment</a>
+                    <div style="display: flex;color: darkcyan;" class="mt-3">
+                        <label>{{data.createdBy}}</label>
+                        <label style=" margin-left: 6px;">{{data.createdOn}}</label>
+                    </div>
+                  </div>
+                  <div class="col-3">
+                    <img style="float: right;" src="data:image/jpeg;base64,{{data.imgPath}}" height="130px;">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>

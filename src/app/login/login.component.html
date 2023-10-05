@@ -1,0 +1,36 @@
+<div class="container-fluid" style="background-color:skyblue;">
+    <div class="row">
+        <div class="col-12">
+            <form #loginUserForm="ngForm" (ngSubmit)=userLogin(loginUserForm.value) style="background-color:whitesmoke; padding: 50px; margin: 132px;width: 550px; border-radius: 5%;;">
+                <div class="row">
+                    <p *ngIf="unAuthorized" style="color: red;">Invalid Credentials!!!</p>
+                    <div class="col-3">
+                        <h4 style="float:right;color: blue;">Sign In</h4>
+                    </div>
+                </div>
+                <div class="row mt-2">
+                    <div class="col-7">
+                        <input type="text" required #UserName="ngModel" name="UserName" ngModel class="form-control" placeholder="Enter User Name"/>
+                        <p *ngIf="UserName.invalid && UserName.touched" style="color: red;">This field is required</p>
+                    </div>
+                </div>
+                <div class="row mt-3">
+                    <div class="col-7">
+                        <input type="password" #Password="ngModel" required name="Password" ngModel class="form-control" placeholder="Enter Password" />
+                        <p *ngIf="Password.invalid && Password.touched " style="color: red;">This field is required</p>
+                    </div>
+                </div>
+                <div class="row mt-2">
+                    <div class="col-7">
+                      <a routerLink="register" style="float:right">Click here to register</a>
+                    </div>
+                </div>
+                <div class="row mt-2">
+                    <div class="col-2">
+                        <input type="submit" [disabled]="loginUserForm.invalid" class="btn btn-primary" value="Login"/>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

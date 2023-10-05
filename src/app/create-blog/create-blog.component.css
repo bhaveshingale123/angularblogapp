@@ -1,0 +1,19 @@
+.form-container{
+ /* border: 1px solid #fff; */
+padding: 10px 40px;
+/* -webkit-box-shadow: -1px 4px 26px 11px rgba(0,0,0,0.75);
+-moz-box-shadow: -1px 4px 26px 11px rgba(0,0,0,0.75);
+box-shadow: -1px 4px 26px 11px rgba(0,0,0,0.75); */
+margin-top: 100px;
+border-radius: 5%;
+}
+label{
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+#cardDiv{
+    max-height: 450px;
+    overflow-y: scroll;
+    margin-top: 100px;
+}
+

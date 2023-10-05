@@ -1,0 +1,47 @@
+<div class="container-fluid" style="background-color:skyblue;">
+    <div class="row">
+        <div class="col-12">
+            <form #registerUserForm="ngForm" (ngSubmit)=registerUser(registerUserForm.value) style="background-color:whitesmoke; padding: 50px; margin: 104px;width: 550px; border-radius: 5%;">
+                <div class="row">
+                    <div class="col-3">
+                        <h4 style="float:right;color: blue;">Sign Up</h4>
+                    </div>
+                </div>
+                <div class="row mt-3">
+                    <div class="col-6">
+                        <input type="text" class="form-control" required #Fistname="ngModel" placeholder="Enter First Name" name="FirstName" ngModel/>
+                        <p *ngIf="Fistname.invalid && Fistname.touched " style="color: red;">This field is required</p>
+                    </div>
+                    <div class="col-6">
+                        <input type="text" required #LastName="ngModel" class="form-control" placeholder="Enter Last Name" name="LastName" ngModel/>
+                        <p *ngIf="LastName.invalid && LastName.touched " style="color: red;">This field is required</p>
+                    </div>
+                </div>
+                <div class="row mt-3">
+                    <div class="col-6">
+                        <input type="email" required #Email="ngModel" class="form-control" placeholder="Enter Email" name="Email" ngModel/>
+                        <p *ngIf="Email.invalid && Email.touched " style="color: red;">This field is required</p>
+                    </div>
+                    <div class="col-6">
+                        <input type="text" required #UserName="ngModel" class="form-control" placeholder="Enter User Name" name="UserName" ngModel />
+                        <p *ngIf="UserName.invalid && UserName.touched " style="color: red;">This field is required</p>
+                    </div>
+                </div>
+                <div class="row mt-3">
+                    <div class="col-6">
+                        <input type="password" required #Password="ngModel" class="form-control" placeholder="Enter Password" name="Password" ngModel />
+                        <p *ngIf="Password.invalid && Password.touched " style="color: red;">This field is required</p>
+                    </div>
+                </div>
+                <div class="row mt-3">
+                    <div class="col-2">
+                        <input [disabled]="registerUserForm.invalid" type="submit" class="btn btn-primary" value="Sign Up"/>
+                    </div>
+                    <div class="col-10">
+                        <a routerLink="" style="float:right">Click here to Sign In</a>
+                      </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

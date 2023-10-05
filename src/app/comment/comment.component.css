@@ -1,0 +1,11 @@
+#commentDiv{
+   
+   padding: 10px 40px;
+   -webkit-box-shadow: -1px 4px 26px 11px rgba(0,0,0,0.75);
+   -moz-box-shadow: -1px 4px 26px 11px rgba(0,0,0,0.75);
+   box-shadow: -1px 4px 26px 11px rgba(0,0,0,0.75);
+   height: 250px;
+   overflow-y: scroll;
+   background-color: white;
+}
+
